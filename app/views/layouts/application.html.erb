@@ -16,18 +16,9 @@
         <div class="nav">
           <div class="nav__left">
             <%= link_to image_tag("logo.png", class: :logo), root_path %>
-            <% if user_signed_in? %>
-            <div class="greeting">
-              こんにちは、
-            <%= link_to "#{current_user.name}", user_path(current_user), class: :greeting__link%>
-              さん
-            </div>
-            <% end %>
+            
           </div>
-              <%# <%= link_to "New Proto", root_path, class: :nav__btn %>
-            <%# </div> %>
-          <%# // ログインしているときは上記を表示するようにしましょう %>
-          <%# ログインしていないときは以下を表示するようにしましょう %>
+             
             <div class="nav__right">
             <% if user_signed_in? %>
                 <%= link_to "New Proto", new_prototype_path,class: :nav__btn %>
